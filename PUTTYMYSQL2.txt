@@ -1,0 +1,94 @@
+ALTER TABLE postac MODIFY COLUMN rodzaj ENUM('wiking', 'ptak', 'kobieta', 'syrena');
+desc postac;
+INSERT INTO postac(id_postaci, nazwa, rodzaj, data_ur, wiek) VALUES(9, 'Gertruda Nieszczera', 'syrena', '2000-03-05', 22);
+SELECT * FROM postac;
+exit
+nano;
+nano kozdronj;
+help
+nano .mysql
+\134c
+nano .mysql
+nano .mysql
+\134c
+nano .mysql
+nano .mysql;
+exit
+desc postac postac;
+use kozdronj;
+desc postac postac;
+desc postac;
+SELECT * FROM postac;
+desc statek;
+SELECT * FROM statek;
+UPDATE postac SET nazwa_statku bjorn;
+UPDATE postac SET nazwa_statku = bjorn;
+UPDATE postac SET nazwa_statku = statek_nr1;
+UPDATE postac SET nazwa_statku = statek_nr1 WHERE id_postaci = 1;
+UPDATE postac SET nazwa_statku = 'statek_nr1' WHERE id_postaci = 1;
+SELECT * FROM postac;
+UPDATE postac SET nazwa_statku = statek_nr1 WHERE id_postaci = 7;
+UPDATE postac SET nazwa_statku = 'statek_nr1' WHERE id_postaci = 7;
+UPDATE postac SET nazwa_statku = 'statek_nr1' WHERE id_postaci = 8;
+UPDATE statek SET max_ladownosc = max_ladownosc - 0,3;
+UPDATE statek SET max_ladownosc = max_ladownosc * 0,3;
+UPDATE statek SET max_ladownosc = max_ladownosc * 0.3;
+SELECT * FROM statek;
+INSERT INTO  postacie(id_postaci,nazwa,rodzaj,data_ur,wiek) VALUES('waz_loko','waz','1970-04-15',52);
+INSERT INTO  postac(id_postaci,nazwa,rodzaj,data_ur,wiek) VALUES('waz_loko','waz','1970-04-15',52);
+INSERT INTO  postac(id_postaci,nazwa,rodzaj,data_ur,wiek) VALUES(10,'waz_loko','waz','1970-04-15',52);
+INSERT INTO postac(id_postaci,nazwa,rodzaj) VALUES(10,'waz_loko','waz');
+INSERT INTO postac(id_postaci,nazwa,rodzaj) VALUES(10,'loko','waz');
+INSERT INTO postac(id_postaci,nazwa,rodzaj) VALUES(10,'waz_loko','waz');
+INSERT INTO postac(id_postaci,nazwa,rodzaj) VALUES(10,'waz_loko',waz);
+INSERT INTO postac(id_postaci,nazwa,rodzaj) VALUES(10,'waz_loko','waz');
+INSERT INTO postac(id_postaci,nazwa,rodzaj) VALUES(10,waz_loko,waz);
+INSERT INTO postac(id_postaci,nazwa,rodzaj) VALUES('10','waz_loko','waz');
+desc postac;
+ALTER TABLE postac MODIFY rodzaj('waz');
+ALTER TABLE postac MODIFY rodzaj;
+ALTER TABLE postac MODIFY rodzaj enum('wiking','ptak','kobieta','syrena','waz');
+desc postac;
+INSERT INTO  postac(id_postaci,nazwa,rodzaj,data_ur,wiek) VALUES(10,'waz_loko','waz','1970-04-15',52);
+desc postac;
+SELECT * FROM postac;
+CREATE TABLE Marynarz(id_postaci INT PRIMARY KEY auto_increment, nazwa VARCHAR(45), rodzaj ENUM('wiking'), data_ur VARCHAR(45), wiek INT, funkcja varchar(30), nazwa_statku FOREIGN KEY REFERENCES(statek));
+CREATE TABLE Marynarz(id_postaci INT PRIMARY KEY auto_increment, nazwa VARCHAR(45), rodzaj ENUM('wiking'), data_ur VARCHAR(45), wiek INT, funkcja varchar(30), nazwa_statku FOREIGN KEY (nazwa_statku) REFERENCES statek(nazwa_statku);
+CREATE TABLE Marynarz(id_postaci INT PRIMARY KEY auto_increment, nazwa VARCHAR(45), rodzaj ENUM('wiking'), data_ur VARCHAR(45), wiek INT, funkcja varchar(30), FOREIGN KEY (nazwa_statku) REFERENCES statek(nazwa_statku);
+CREATE TABLE Marynarz(id_postaci INT PRIMARY KEY auto_increment, nazwa VARCHAR(45), rodzaj ENUM('wiking'), data_ur VARCHAR(45), wiek INT, funkcja varchar(30), FOREIGN KEY(nazwa_statku) REFERENCES statek(nazwa_statku);
+desc statek;
+CREATE TABLE Marynarz(id_postaci INT PRIMARY KEY auto_increment, nazwa VARCHAR(45), rodzaj ENUM('wiking'), data_ur VARCHAR(45), wiek INT, funkcja varchar(30), nazwa_statku VARCHAR(30) FOREIGN KEY REFERENCES statek(nazwa_statku);
+CREATE TABLE Marynarz(id_postaci INT PRIMARY KEY auto_increment, nazwa VARCHAR(45), rodzaj ENUM('wiking'), data_ur VARCHAR(45), wiek INT, funkcja varchar(30), nazwa_statku VARCHAR(30) FOREIGN KEY REFERENCES statek(nazwa_statku));
+CREATE TABLE Marynarz(id_postaci INT PRIMARY KEY auto_increment, nazwa VARCHAR(45), rodzaj ENUM('wiking'), data_ur VARCHAR(45), wiek INT, funkcja varchar(30), nazwa_statku INT FOREIGN KEY REFERENCES statek(nazwa_statku));
+CREATE TABLE Marynarz(id_postaci INT PRIMARY KEY auto_increment, nazwa VARCHAR(45), rodzaj ENUM('wiking'), data_ur VARCHAR(45), wiek INT, funkcja varchar(30), nazwa_statku VARCHAR(30), FOREIGN KEY REFERENCES statek(nazwa_statku));
+CREATE TABLE Marynarz(id_postaci INT PRIMARY KEY auto_increment, nazwa VARCHAR(45), rodzaj ENUM('wiking'), data_ur VARCHAR(45), wiek INT, funkcja varchar(30), nazwa_statku INT FOREIGN KEY REFERENCES statek(nazwa_statku)));
+CREATE TABLE Marynarz(id_postaci INT PRIMARY KEY auto_increment, nazwa VARCHAR(45), rodzaj ENUM('wiking'), data_ur VARCHAR(45), wiek INT, funkcja varchar(30), nazwa_statku INT FOREIGN KEY, REFERENCES statek(nazwa_statku)));
+CREATE TABLE Marynarz(id_postaci INT PRIMARY KEY auto_increment, nazwa VARCHAR(45), rodzaj ENUM('wiking'), data_ur VARCHAR(45), wiek INT, funkcja varchar(30),nazwa_statku INT FOREIGN KEY REFERENCES statek(nazwa_statku)));
+CREATE TABLE Marynarz(id_postaci INT PRIMARY KEY auto_increment, nazwa VARCHAR(45), rodzaj ENUM('wiking'), data_ur VARCHAR(45), wiek INT, funkcja varchar(30), nazwa_statku INT FOREIGN KEY REFERENCES statek(nazwa_statku));
+CREATE TABLE Marynarz(id_postaci INT PRIMARY KEY auto_increment, nazwa VARCHAR(45), rodzaj ENUM('wiking'), data_ur VARCHAR(45), wiek INT, funkcja varchar(30), nazwa_statku varchar(30) FOREIGN KEY REFERENCES statek(nazwa_statku));
+CREATE TABLE Marynarz(id_postaci INT PRIMARY KEY auto_increment, nazwa VARCHAR(45), rodzaj ENUM('wiking'), data_ur VARCHAR(45), wiek INT, funkcja varchar(30), FOREIGN KEY (nazwa_statku)  REFERENCES statek(nazwa_statku));
+CREATE TABLE Marynarz(id_postaci INT PRIMARY KEY auto_increment, nazwa VARCHAR(45), rodzaj ENUM('wiking'), data_ur VARCHAR(45), wiek INT, funkcja varchar(30), FOREIGN KEY ('nazwa_statku')  REFERENCES statek(nazwa_statku));
+CREATE TABLE Marynarz(id_postaci INT PRIMARY KEY auto_increment, nazwa VARCHAR(45), rodzaj ENUM('wiking'), data_ur VARCHAR(45), wiek INT, funkcja varchar(30), FOREIGN KEY (nazwa_statku) REFERENCES statek(nazwa_statku));
+CREATE TABLE Marynarz(id_postaci INT PRIMARY KEY auto_increment, nazwa VARCHAR(45), rodzaj ENUM('wiking'), data_ur VARCHAR(45), wiek INT, funkcja varchar(30), FOREIGN KEY (statek) REFERENCES statek(nazwa_statku));
+CREATE TABLE Marynarz(id_postaci INT PRIMARY KEY auto_increment, nazwa VARCHAR(45), rodzaj ENUM('wiking'), data_ur VARCHAR(45), wiek INT, funkcja varchar(30), FOREIGN KEY (nazwa_statku) REFERENCES statek(nazwa_statku));
+CREATE TABLE Marynarz LIKE postac;
+INSERT INTO marynarz SELECT * FROM postac WHERE nazwa_statku IS NOT NULL;
+INSERT INTO Marynarz SELECT * FROM postac WHERE nazwa_statku IS NOT NULL;
+desc Marynarz;
+DROP TABLE marynarz;
+DROP TABLE Marynarz;
+CREATE TABLE marynarz AS SELECT * FROM postac WHERE nazwa_statku IS NOT NULL;
+ALTER TABLE marynarz ADD PRIMARY KEY(pesel);
+UPDATE marynarz SET nazwa_statku=NULL;
+desc marynarz;
+SELECT * FROM marynarz;
+DELETE FROM marynarz WHERE rodzaj = 'wiking' AND nazwa!='bjorn' LIMIT 1;
+ALTER TABLE postac DROP PRIMARY KEY;
+DROP TABLE statek;
+SELECT * FROM marynarz;
+CREATE TABLE zwierz(id INT PRIMARY KEY auto_increment, nazwa varchar(45), wiek INT);
+INSERT INTO zwierz(id,nazwa,wiek) VALUES(1,'drozd',43);
+INSERT INTO zwierz(id,nazwa,wiek) VALUES(2,'waz_loko',52);
+SELECT * FROM zwierz;
+desc wikingowie;
+exit
